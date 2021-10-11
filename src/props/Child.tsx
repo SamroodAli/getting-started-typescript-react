@@ -3,5 +3,13 @@ interface ChildProps {
 }
 
 export const Child = ({ color }: ChildProps) => {
-  return <div> Hi there</div>;
+  const content = `I am ${color}`;
+  return <div>{content}</div>;
 };
+
+export const ChildAsFC: React.FC<ChildProps> = ({ color }) => {
+  const content = `I am ${color}`;
+  return <div> {content}</div>;
+};
+
+ChildAsFC.displayName = "Child"; // types of methods like this, proptypes etc are only in ChildAsFC component only
