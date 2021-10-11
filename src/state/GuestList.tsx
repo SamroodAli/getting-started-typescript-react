@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const GuestList: React.FC = () => {
   const [name, setName] = useState("");
@@ -7,6 +7,8 @@ const GuestList: React.FC = () => {
   const onClick = () => {
     setGuestList([...guestList, name]);
   };
+
+  useEffect(() => {}, [guestList]);
 
   return (
     <div>
