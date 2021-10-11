@@ -1,4 +1,5 @@
 import ReactDOM from "react-dom";
+import GuestList from "./state/GuestList";
 
 const App = () => {
   return (
@@ -9,3 +10,10 @@ const App = () => {
 };
 
 ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <>
+    <hr />
+    <GuestList />
+  </>,
+  document.getElementById("state")
+);
