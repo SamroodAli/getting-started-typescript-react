@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom";
 import GuestList from "./state/GuestList";
 import UserSearch from "./state/UserSearch";
+import EventComponent from "./events/EventComponent";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
 };
 
 ReactDOM.render(<App />, document.getElementById("root"));
+
 ReactDOM.render(
   <>
     <hr />
@@ -18,10 +20,19 @@ ReactDOM.render(
   </>,
   document.getElementById("state")
 );
+
 ReactDOM.render(
   <>
     <hr />
     <UserSearch />
   </>,
   document.getElementById("state-search")
+);
+
+ReactDOM.render(
+  <>
+    <hr />
+    <EventComponent />
+  </>,
+  document.getElementById("event")
 );
